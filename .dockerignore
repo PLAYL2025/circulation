@@ -1,12 +1,11 @@
-# Hidden files / folders
-.*
-
-# Temp files
-*~
-
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-
-# Mac OS
-.DS_Store
+.git
+.gitignore
+**/__pycache__
+**/*.pyc
+*.log
+.env*
+.vscode
+.idea
+node_modules
+public/feed/*.json
+tools/opds/.venv
