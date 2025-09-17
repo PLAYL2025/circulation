@@ -6,7 +6,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 # deps de sistema para compilar libs python (psycopg2 etc.)
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential libpq-dev curl ca-certificates git && \
+    build-essential python3-dev libpq-dev curl ca-certificates git libxml2-dev libxmlsec1-dev libxmlsec1-openssl pkg-config libffi-dev zlib1g-dev libjpeg-dev && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
@@ -30,7 +30,7 @@ FROM python:3.11-slim AS runtime
 
 # libs de runtime (psycopg2 binário precisa do libpq5)
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    libpq5 ca-certificates && \
+    libpq5 ca-certificates libxml2 libxmlsec1 libxmlsec1-openssl libffi8 && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
