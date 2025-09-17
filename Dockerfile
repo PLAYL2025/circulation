@@ -1,3 +1,2 @@
-FROM ghcr.io/thepalaceproject/circ-webapp:latest
-# (Opcional) COPY de branding/config extra se precisar no futuro
+FROM ghcr.io/thepalaceproject/circulation:latest
 EXPOSE 80
