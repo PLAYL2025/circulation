@@ -6,7 +6,8 @@
 # The only difference are what services are enabled.
 ###############################################################################
 
-ARG BASE_IMAGE=ghcr.io/thepalaceproject/circ-baseimage:latest
+FROM ghcr.io/thepalaceproject/circulation:latest
+EXPOSE 80
 
 FROM ${BASE_IMAGE} AS common
 
