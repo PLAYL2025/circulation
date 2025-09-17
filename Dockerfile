@@ -22,7 +22,7 @@ RUN pip install --no-cache-dir --upgrade pip setuptools wheel poetry && \
     poetry config virtualenvs.create false
 
 # instale deps (sem dev)
-RUN poetry install --no-interaction --no-ansi --without dev
+RUN poetry install -vvv --no-interaction --no-ansi --without dev
 
 # copie o código
 COPY . .
